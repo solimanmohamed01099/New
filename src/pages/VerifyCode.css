@@ -1,0 +1,179 @@
+.verify-container {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/ifarm-background.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.verify-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.25); 
+  z-index: 1;
+}
+.back-circle-btn {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 3;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.back-circle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.verify-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo-area {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.verify-logo {
+  width: 100px;
+  height: auto;
+}
+
+.verify-content h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.verify-content .subtitle {
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.verify-content .input-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.verify-content .input-group label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.code-inputs input {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #111;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.code-inputs input:focus {
+  background-color: #ffffff;
+  border-color: #167d3c;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(22, 125, 60, 0.2);
+}
+
+.code-inputs input:not(:placeholder-shown) {
+  border-color: #167d3c;
+  background-color: #e8f5e9;
+  color: #167d3c;
+  transform: translateY(-2px);
+}
+
+.verify-content .submit-btn {
+  background-color: #167d3c;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.verify-content .submit-btn:hover {
+  background-color: #12612e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(22, 125, 60, 0.3);
+}
+
+.resend-text {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.resend-link {
+  color: #167d3c;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.resend-link:hover {
+  border-bottom: 2px solid #167d3c;
+}
